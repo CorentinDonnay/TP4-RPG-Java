@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.HBox?>
+<VBox fx:id="background" alignment="CENTER" spacing="25" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tp4_v2.InterfaceGraphiqueJeuControlleur" >
+
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25"/>
+    </padding>
+
+
+    <Label styleClass="button">Bienvenue dans Mini RPG Lite 3000 ! Choisissez vos héros et lancez vous dans l'aventure !</Label>
+
+    <Label fx:id="nom"></Label>
+    <Button style="-fx-font-size: 40px;-fx-background-color: red" text="JOUER" styleClass="button" onAction="#onPlayButtonClick"/>
+
+    <HBox alignment="CENTER">
+        <VBox styleClass="center">
+            <Button text="+" styleClass="button" onAction="#ajoutSoigneurBouton"/>
+            <Label styleClass="button" fx:id="nombreHealer">Nombre de Soigneurs : 0</Label>
+            <Button styleClass="button" text="-" onAction="#diminuerSoigneurBouton"/>
+        </VBox>
+        <VBox styleClass="center">
+            <Button text="+" styleClass="button" onAction="#ajoutChasseurBouton"/>
+            <Label styleClass="button" fx:id="nombreHunter">Nombre de Chasseurs : 0</Label>
+            <Button styleClass="button" text="-" onAction="#diminuerChasseurBouton"/>
+        </VBox>
+        <VBox styleClass="center">
+            <Button text="+" styleClass="button" onAction="#ajoutGuerrierBouton"/>
+            <Label styleClass="button" fx:id="nombreWarrior">Nombre de Guerriers : 0</Label>
+            <Button styleClass="button" text="-" onAction="#diminuerGuerrierBouton"/>
+        </VBox>
+        <VBox styleClass="center">
+            <Button text="+" styleClass="button" onAction="#ajoutMageBouton"/>
+            <Label styleClass="button" fx:id="nombreMage">Nombre de Mages : 0</Label>
+            <Button styleClass="button" text="-" onAction="#diminuerMageBouton"/>
+        </VBox>
+
+    </HBox>
+
+
+
+
+
+
+</VBox>
